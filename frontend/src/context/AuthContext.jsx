@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get("https://social-media-platform-pvy8.onrender.com");
+      const response = await axios.get("https://social-media-platform-pvy8.onrender.com/me");
       setUser(response.data);
     } catch (error) {
       localStorage.removeItem('token');
@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post("https://social-media-platform-pvy8.onrender.com", { email, password });
+      const response = await axios.post("https://social-media-platform-pvy8.onrender.com/login", { email, password });
       const { token, user: userData } = response.data;
       localStorage.setItem('token', token);
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -48,7 +48,7 @@ export function AuthProvider({ children }) {
 
   const register = async (username, email, password) => {
     try {
-      const response = await axios.post("https://social-media-platform-pvy8.onrender.com", {
+      const response = await axios.post("https://social-media-platform-pvy8.onrender.com/register", {
         username,
         email,
         password
