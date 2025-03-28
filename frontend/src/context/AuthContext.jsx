@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext();
-const API_BASE_URL = "http://localhost:5000/api/auth";
+const API_BASE_URL ="https://social-media-platform-pvy8.onrender.com";
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/me`);
+      const response = await axios.get("https://social-media-platform-pvy8.onrender.com");
       setUser(response.data);
     } catch (error) {
       localStorage.removeItem('token');
@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/login`, { email, password });
+      const response = await axios.post("https://social-media-platform-pvy8.onrender.com", { email, password });
       const { token, user: userData } = response.data;
       localStorage.setItem('token', token);
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -48,7 +48,7 @@ export function AuthProvider({ children }) {
 
   const register = async (username, email, password) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/register`, {
+      const response = await axios.post("https://social-media-platform-pvy8.onrender.com", {
         username,
         email,
         password
