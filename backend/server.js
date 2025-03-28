@@ -12,7 +12,15 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: [
+    "https://your-frontend.vercel.app", 
+    "http://localhost:5000"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"]
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Correct route prefixes
