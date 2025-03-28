@@ -9,7 +9,7 @@ export default function CommentSection({ post, onUpdate }) {
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://social-media-platform-pvy8.onrender.com", { content: commentContent }, {
+      await axios.post("https://social-media-platform-pvy8.onrender.com/api/posts/${post._id}/comment", { content: commentContent }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setCommentContent('');
