@@ -16,7 +16,7 @@ export default function PostForm({ onPostCreated }) {
     setError('');
 
     try {
-      await axios.post('http://localhost:5000/api/posts', { content }, {
+      await axios.post("https://social-media-platform-pvy8.onrender.com", { content }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setContent('');
