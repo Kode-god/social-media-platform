@@ -63,6 +63,11 @@ Endpoint	Method	Description
 /api/posts/:id/like	POST	Like/unlike post
 
 Users
+
 Endpoint	Method	Description
+
 /api/users/me	GET	Get current user
+
 /api/users/:id	GET	Get user profile
+
+To acces the deployed website use the link https://social-media-platform-beryl.vercel.app/  further updates will be done for the application to run smoothly
