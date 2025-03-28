@@ -4,20 +4,20 @@ A full-stack social media platform built with the MERN stack (MongoDB, Express, 
 
 
 
-## 🚀 Features
+##  Features
 - **User Authentication**: Register, login, and JWT-based session management
 - **Post Management**: Create, view, and interact with posts
 - **Social Interactions**: Like posts and add comments
 - **User Profiles**: View and update profiles with avatars
 - **Responsive Design**: Works on all device sizes
 
-## 🛠 Technologies
+## Technologies
 - Frontend: React, Vite, Material-UI
 - Backend: Node.js, Express, MongoDB
 - Authentication: JSON Web Tokens (JWT)
 - Deployment: Render (Backend), Vercel (Frontend)
 
-## ⚙ Installation
+## Installation
 ### Prerequisites
 - Node.js v18+
 - MongoDB Atlas account
@@ -25,7 +25,7 @@ A full-stack social media platform built with the MERN stack (MongoDB, Express, 
 
 ### Backend Setup
 bash
-git clone https://github.com/yourusername/social-media-app.git
+git clone repo name
 cd backend
 npm install
 
@@ -48,13 +48,18 @@ npm run dev
 ### API Documentation
 Authentication
 Endpoint	Method	Description	Request Body Example
+
 /api/auth/register	POST	User registration	{ username, email, password }
+
 /api/auth/login	POST	User login	{ email, password }
 
 Posts
 Endpoint	Method	Description
+
 /api/posts	GET	Get all posts
+
 /api/posts	POST	Create new post
+
 /api/posts/:id/like	POST	Like/unlike post
 
 Users
