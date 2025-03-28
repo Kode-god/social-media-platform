@@ -8,7 +8,7 @@ export default function PostList({ posts = [], onUpdate }) {
 
   const handleLike = async (postId) => {
     try {
-      await axios.post("https://social-media-platform-pvy8.onrender.com", {}, {
+      await axios.post(`https://social-media-platform-pvy8.onrender.com/api/posts/${postId}/like`, {}, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       onUpdate?.();
