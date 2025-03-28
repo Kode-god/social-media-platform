@@ -10,7 +10,7 @@ export default function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get(`/api/users/${id}`);
+        const res = await axios.get("https://social-media-platform-pvy8.onrender.com");
         setProfile(res.data);
       } catch (error) {
         console.error('Error fetching profile:', error.response?.data?.error);
