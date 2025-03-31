@@ -29,7 +29,7 @@ git clone repo name
 cd backend
 npm install
 
-# Create .env file
+### Create .env file
 echo "MONGO_URI=your_mongodb_atlas_uri
 JWT_SECRET=your_jwt_secret
 PORT=5000" > .env
@@ -70,4 +70,4 @@ Endpoint	Method	Description
 
 /api/users/:id	GET	Get user profile
 
-To acces the deployed website use the link https://social-media-platform-beryl.vercel.app/  further updates will be done for the application to run smoothly
+To acces the deployed website use the link https://twitter-clone-pink-ten.vercel.app/ further updates will be done for the application to run smoothly
