@@ -1,6 +1,6 @@
 # MERN Social Media Application 
 
-A full-stack social media platform built with the MERN stack (MongoDB, Express, React, Node.js), featuring user authentication, post creation, comments, likes, and profile management.
+A full-stack social media platform built with the MERN stack (MongoDB, Express, React, Node.js), featuring user authentication, post creation, comments, likes, and profile management. The website is a clone of twitter but i will be adding functionalities and improving on it as time goes by
 
 
 
