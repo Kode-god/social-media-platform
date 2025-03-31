@@ -13,7 +13,7 @@ const HomePage = () => {
 
   const fetchPosts = async () => {
     try {
-      const { data } = await axios.get('/api/posts');
+      const { data } = await axios.get('https://social-media-platform-9q09.onrender.com/api/posts');
       setPosts(data);
     } catch (error) {
       toast.error('Error fetching posts');
