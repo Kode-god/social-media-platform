@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserProfile = async () => {
     try {
-      const { data } = await axios.get('/api/users/profile');
+      const { data } = await axios.get('https://social-media-platform-9q09.onrender.com/api/users/profile');
       setUser(data);
     } catch (error) {
       localStorage.removeItem('token');
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const { data } = await axios.post('/api/users/login', {
+    const { data } = await axios.post('https://social-media-platform-9q09.onrender.com/api/users/login', {
       email,
       password,
     });
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (username, email, password) => {
-    const { data } = await axios.post('/api/users', {
+    const { data } = await axios.post('https://social-media-platform-9q09.onrender.com/api/users', {
       username,
       email,
       password,
