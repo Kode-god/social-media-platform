@@ -16,7 +16,7 @@ const Post = ({ post, onUpdate }) => {
 
   const handleLike = async () => {
     try {
-      await axios.put(`/api/posts/${post._id}/like`);
+      await axios.put(`https://social-media-platform-9q09.onrender.com/api/posts/${post._id}/like`);
       
       if (!post.likes.includes(user._id) && socket) {
         socket.emit('newLike', post.user._id);
@@ -31,7 +31,7 @@ const Post = ({ post, onUpdate }) => {
   const handleComment = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`/api/posts/${post._id}/comments`, {
+      await axios.post(`https://social-media-platform-9q09.onrender.com/api/posts/${post._id}/comments`, {
         content: commentContent,
       });
       
