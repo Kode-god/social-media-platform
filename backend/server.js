@@ -22,7 +22,7 @@ const httpServer = createServer(app);
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'https://twitter-clone-pink-ten.vercel.app/'  //  update this with your Vercel URL
+    ? 'https://twitter-clone-pink-ten.vercel.app'  //  update this with your Vercel URL
     : 'http://localhost:5173',
   credentials: true
 }));
