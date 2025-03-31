@@ -46,28 +46,55 @@ npm run dev
 
 
 ### API Documentation
-Authentication
-Endpoint	Method	Description	Request Body Example
+### Authentication Endpoints
+### Register User
+URL: /api/users
+Method: POST
 
-/api/auth/register	POST	User registration	{ username, email, password }
+###Login User
+URL: /api/users/login
+Method: POST
 
-/api/auth/login	POST	User login	{ email, password }
+### User Endpoints
+### Get User Profile
+URL: /api/users/profile
+Method: GET
+Auth: Required
 
-Posts
-Endpoint	Method	Description
+##Get User Profile by ID
+URL: /api/users/profile/:id
+Method: GET
+Auth: Required
 
-/api/posts	GET	Get all posts
+### Follow/Unfollow User
+URL: /api/users/:id/follow
+Method: PUT
+Auth: Required
 
-/api/posts	POST	Create new post
+### Post Endpoints
+Create Post
+URL: /api/posts
+Method: POST
+Auth: Required
 
-/api/posts/:id/like	POST	Like/unlike post
+### Get All Posts
+URL: /api/posts
+Method: GET
+Auth: Required
 
-Users
+### Get User Posts
+URL: /api/posts/user/:userId
+Method: GET
+Auth: Required
 
-Endpoint	Method	Description
+### Like/Unlike Post
+URL: /api/posts/:id/like
+Method: PUT
+Auth: Required
 
-/api/users/me	GET	Get current user
-
-/api/users/:id	GET	Get user profile
+### Comment on Post
+URL: /api/posts/:id/comments
+Method: POST
+Auth: Required
 
 To acces the deployed website use the link https://twitter-clone-pink-ten.vercel.app/ further updates will be done for the application to run smoothly
